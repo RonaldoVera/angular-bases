@@ -1,0 +1,30 @@
+<h3>Listado de Héroes</h3>
+
+<!-- con el else se coloca el caso contrario u luego se referencia en el 'ng-template' -->
+<div *ngIf="deletHero; else nothingWasDelet" >
+<h3>Héroe borrado
+<small class="text-danger">
+{{deletHero}}
+</small></h3>
+</div>
+<!-- aqui usamos el teplate para crear un <div> pero que no existe. Y hacemos una referencia local -->
+<ng-template #nothingWasDelet>
+<h3> No ha borrado nada. </h3>
+</ng-template>
+
+
+<button
+*ngIf="heroName.length > 0"
+(click)="removeLastHero()"
+class="btn btn-outline-danger" >
+Borrar último héroe
+</button>
+
+
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroName"
+  class="list-group-item">
+  {{ name }}
+</li>
+</ul>
