@@ -20,6 +20,5 @@ import { ListComponent } from "./list/list.component";
   imports:[
     CommonModule
   ]
-
 })
 export class HeroesModule {}
