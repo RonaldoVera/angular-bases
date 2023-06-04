@@ -1,0 +1,24 @@
+<h3>DBZ Personajes</h3>
+<hr>
+
+
+<div class="row">
+
+
+  <!--aqui tenemos el componete list, que es la lista de heroes con sus cantidad de poder-->
+  <div class="col">
+    <dbz-list [characterlist]="characters"
+              (onDelet)="onDeletCharacter($event)"></dbz-list>
+  </div>
+
+
+  <!--aqui tenemos el formulario para rellenar el nombre y el poder de los heroes-->
+  <div class="col">
+    <dbz-add-character (onNewChatacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+
+
+</div>
+
+
+
