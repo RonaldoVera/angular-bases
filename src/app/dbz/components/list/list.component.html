@@ -17,10 +17,10 @@
     <span class="text-primary"> {{ i + 1 }}. </span>
     <span>  {{ character.name }} - </span>
     <strong> Power: </strong>
-    <span>{{ character.power }}</span>
+    <span>{{ character.power }} - </span>
   </div>
 
-    <button (click)="onDeleteCharacter(i)" class= "btn btn-outline-secondary" cla>x</button>
+    <button (click)="onDeleteCharacter(character.id)" class= "btn btn-outline-secondary">x</button>
 
   </li>
 </ul>
